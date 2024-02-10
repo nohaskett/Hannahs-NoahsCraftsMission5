@@ -4,15 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Hannahs_NoahsCraftsMission5</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Hannahs_NoahsCraftsMission5.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="~/artstudio-master/assets/css/main.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hannahs_NoahsCraftsMission5</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hannah's Crafts</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Calculator">Price Calculator</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,12 +43,24 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - Hannahs_NoahsCraftsMission5 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - Hannah's Crafts - <a asp-area="" asp-controller="Home" asp-action="Privacy">Price Calculator</a>
+        </div>
+        <div class="container">
+            <section>
+                <br />
+                <h3>About the Author</h3>
+                <p>
+                    Welcome to Hannah's Crafts! I'm Noah, a Web Developer based in Provo, UT. I love my wife Hannah, and she has been showing me the crochet ropes.
+                    This website is a showcase of my wife's work and a space where I can share her creative journey with you.
+                </p>
+                <!-- Add more details about yourself as needed -->
+            </section>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/calculator.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

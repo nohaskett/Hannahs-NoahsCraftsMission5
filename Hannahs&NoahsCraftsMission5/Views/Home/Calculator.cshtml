@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<style>
+    .image-container {
+        text-align: center; /* Center the images within the container */
+    }
+
+        .image-container img {
+            width: 400px; /* Set the width of each image */
+            margin: 5px; /* Add some margin between the images */
+        }
+</style>
+
+<h1>Learn to Crochet!</h1>
+
+<p>Want to have Hannah teach you have to crochet?</p>
+
+<h2>Price Calculator</h2>
+<form>
+    <label>Hours:</label>
+    <input id="txtFrom" value="0"/>
+    <br />
+    <label>Hannah's Hourly Rate:</label>
+    <input type="number" id="txtHourlyRate" value="20" readonly />
+    <br />
+    <label>Your Price:</label>
+    <input id="totalPrice" />
+    <br />
+    <input type="button" value="Calculate Total" id="btnCalculateTotal" />
+</form>
+
+<br />
+
+<div class="image-container">
+    <img src="~/images/display1.jpg" />
+    <img src="~/images/display2.jpg" />
+    <img src="~/images/display3.jpg" />
+    <img src="~/images/display4.jpg" />
+    <img src="~/images/display5.jpg" />
+</div>
+
+<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Back Home</a>
+

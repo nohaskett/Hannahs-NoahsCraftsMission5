@@ -3,6 +3,54 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to Hannah's Crafts!</h1>
+    <div style="background-color: white; border: 2px solid yellow; padding: 15px;">
+        <p style="color: black;">This site is dedicated to showcasing the skills of my wonderfully talented wife, Hannah. She has decided to take up crocheting and sewing, and can now create almost anything you could ever need with a few spools of yarn!</p>
+    </div>
 </div>
+<br /><br />
+
+<div style="background-color: white; border: 2px solid yellow; padding: 15px;">
+    <div class="image-carousel" style="max-width: 600px; max-height: 400px; overflow: hidden; margin: 0 auto; position: relative; text-align: center;">
+        <img src="~/images/HannahWedding.jpg" alt="Image 1" style="max-width: 100%; max-height: 100%; display: none; transition: opacity 0.5s ease-in-out;">
+        <img src="~/images/blanket.jpg" alt="Image 2" style="max-width: 100%; max-height: 100%; display: none; transition: opacity 0.5s ease-in-out;">
+        <img src="~/images/blanket.jpg" alt="Image 3" style="max-width: 100%; max-height: 100%; display: none; transition: opacity 0.5s ease-in-out;">
+    </div>
+</div>
+<br />
+<div style="background-color: white; border: 2px solid yellow; padding: 15px;">
+    <h1 style="color: black; text-align: center;">Here is what Hannah has to say about her hobby:</h1>
+    <p style="color:black;">
+        Hi! My name is Hannah. I am 23 years old, and I am an army brat. My dad flew us all over the world for work, and I have lived in Panama, Italy, and Japan for a time. I just graduated from BYU in Physiology and Developmental Biology, and I am currently going to Nursing School. I hope to work in the NICU when I become a full-time nurse, and I want to make a diference in Healthcare!
+    </p>
+    <p style="color:black;">
+        I picked up crocheting after my husband Noah and I got married. My first projecct was actually a bag made out of grocery bags that I made to reduce plastic waste! After that, I decided to test my abilities and try to make blankets, sweaters, and other fun crafts. I am compltely self-taught, and have even busted out my Grandma's sewing machine for a Quilt-jacket I wanted to make. I love crocheting, and I am excited to teach anyone who would want to learn!'
+    </p>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".image-carousel img");
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        function rotateImages() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Initial display
+        showImage(currentIndex);
+
+        // Set interval to rotate images every 3 seconds (adjust as needed)
+        setInterval(rotateImages, 3000);
+    });
+</script>
+
+
